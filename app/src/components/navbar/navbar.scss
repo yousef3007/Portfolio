@@ -1,0 +1,35 @@
+.list{
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    width: 50%;
+    font: bold 16px 'Open Sans', arial, sans-serif;
+    li{
+        margin: 20px;
+        text-align: center;
+        position: relative; 
+        a{
+            text-decoration: none;
+            color: white;
+            letter-spacing: 0.15em;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        a:after {    
+            background: none repeat scroll 0 0 transparent;
+            position: absolute; 
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            background: red;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+          }
+          a:hover:after { 
+            width: 100%; 
+            left: 0; 
+          }
+    }
+}
